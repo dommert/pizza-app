@@ -4,12 +4,12 @@
 
 <style type="text/css">
 .trow:nth-child(odd){
-   background-color:lightblue;}
+   background-color:lightgreen;}
 </style>
 
 
 	<table class="table table-stripe">
-		<tr class="trow" ng-repeat="pizza in pizzas" ng-if="pizza.name"><th> {{ pizza.id}}) {{ pizza.name }} </th> <th><button class="btn">ORDER</button></th></tr>
+		<tr class="trow" ng-repeat="pizza in pizzas | orderBy:'name'" ng-if="pizza.name"><th> {{ pizza.name }} </th> <th> {{pizza.description}} </th><th><button class="btn btn-danger">ORDER</button></th></tr>
 	</table>
 	</div>
 </div>

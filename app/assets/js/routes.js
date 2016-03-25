@@ -32,6 +32,12 @@ webApp.config(['$urlRouterProvider', '$stateProvider',
             controller: 'toppingsCtrl'
           }) 
 
+          .state('newTopping', {
+            url: '/newTopping',
+            templateUrl: 'templates/partials/newTopping.html',
+            controller: 'mainCtrl'
+          })           
+
           .state('about', {
             url: '/about',
             templateUrl: 'templates/partials/about.html',
