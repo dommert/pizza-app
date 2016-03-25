@@ -5,11 +5,6 @@ webApp.controller('mainCtrl',
 		$scope.message = "Angular is working";
 	});
 
-webApp.controller('buttonCtrl', 
-	function($scope){
-		$scope.singleModel = 1;
-    });
-
 webApp.controller('toppingsCtrl', function($scope, $http) {
     $http.get("https://pizzaserver.herokuapp.com/toppings")
     .then(function(response) {
