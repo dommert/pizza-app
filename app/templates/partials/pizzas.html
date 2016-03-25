@@ -9,6 +9,7 @@
 
 
 	<table class="table table-stripe">
+		<thead><th>Pizza Name</th><th>Description</th></thead>
 		<tr class="trow" ng-repeat="pizza in pizzas | orderBy:'name'" ng-if="pizza.name"><th> {{ pizza.name }} </th> <th> {{pizza.description}} </th><th><button class="btn btn-danger">ORDER</button></th></tr>
 	</table>
 	</div>
