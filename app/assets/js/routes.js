@@ -23,7 +23,7 @@ webApp.config(['$urlRouterProvider', '$stateProvider',
             controller: 'mainCtrl'
           })
           .state('newPizza', {
-            url: '/',
+            url: '/newPizza',
             templateUrl: 'templates/partials/newPizza.html',
             controller: 'mainCtrl'
           })                                        
