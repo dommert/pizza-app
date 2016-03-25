@@ -1,8 +1,13 @@
 <div id="middleBox" class="col-sm-12">
-	<label>Name:</label>
-	<input type="text" ng-model="yourName" placeholder="Enter a name here">
-	
-	<h1>Hello {{yourName}}!</h1>
-	<p><button type="button" class="btn btn-success">Works</button></p>
-	<P>{{ message }}</P>
+<style type="text/css">
+.trow:nth-child(odd){
+   background-color:lightblue;
+}
+</style>
+<div>
+	<h2>Toppings</h2>
+	<table class="table table-stripe">
+		<tr class="trow" ng-repeat="topping in toppings"><th> {{ topping.id}}) {{ topping.name }} </th> </tr>
+	</table>
+</div>
 </div>
