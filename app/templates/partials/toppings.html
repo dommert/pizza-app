@@ -9,7 +9,7 @@
 	<button class="btn" ui-sref="newTopping">Create/Add Topping</button>
 	<BR><BR>
 	<table class="table table-stripe">
-		<tr class="trow" ng-repeat="topping in toppings"><th> {{ topping.id}}) {{ topping.name }} </th> </tr>
+		<tr class="trow" ng-repeat="topping in toppings | orderBy:'name'"><th>{{ topping.name }} </th> </tr>
 	</table>
 </div>
 </div>
