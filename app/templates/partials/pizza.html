@@ -1,14 +1,17 @@
 <div id="middleBox" class="col-sm-12">
-<div>
-	<h3> {{ pizza.name }} </h3>	
-<div> 
-	{{ pizza.description }}
-</div>
-<div>
-<ul>
-	<li class="button">Toppings</li>
-	<li class="button">Toppings</li>
-</ul>
-</div>
-
+	<div class="row">
+		<div class="col-sm-4">
+			
+			<img src="assets/images/pepporoni_pizza.png"></img>
+		</div>
+		
+		<div class="col-sm-8">
+		<h1> {{ pizza.name }} name </h1>	
+			<p>	{{ pizza.description }} description </p>
+			<ul ng-repeat="topping in toppings | orderBy:'name'">
+				<li class="button">Toppings</li>
+				<li class="button">{{topping.name}}</li>
+			</ul>
+		</div>
+	</div>
 </div>
