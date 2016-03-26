@@ -1,20 +1,6 @@
-var webApp = angular.module('webApp', ['ui.bootstrap', 'ui.router']);
+var webApp = angular.module('webApp', ['ui.bootstrap', 'ui.router','angular-loading-bar', 'ngAnimate']);
 
 webApp.controller('mainCtrl',
 	function($scope){
 		$scope.message = "Angular is working";
 	});
-
-webApp.controller('toppingsCtrl', function($scope, $http) {
-    $http.get("https://pizzaserver.herokuapp.com/toppings")
-    .then(function(response) {
-        $scope.toppings = response.data;
-    })
-});
-
-
-webApp.controller('pizzasCtrl', function($scope, $http){
-    $http.get("https://pizzaserver.herokuapp.com/pizzas")
-    .then(function(response){
-        $scope.pizzas = response.data;})
-});
