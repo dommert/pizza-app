@@ -26,6 +26,8 @@ webApp.controller('newToppingCtrl', function($scope, $http, $location){
 			$location.path('/');
 		})
 	};
+
+	$scope.formToppings = {};
 });
 
 // ------ Pizzas Controller  ---------> 
@@ -58,27 +60,53 @@ webApp.controller('pizzaCtrl', function($stateParams, $scope, $http){
 });
 
 // ------ newPizza Controller  ---------> 
-webApp.controller('newPizzaCtrl', function($scope, $http, $location){
+webApp.controller('newPizzaCtrl', ['$scope', '$http', '$location',  function($scope, $http, $location){
 	$scope.formData = {};
+	$scope.formPart = false;
+	$scope.toppings_id = [];
+	$scope.console = console; 
 
 	$scope.newPizzaForm = function() {
-		$scope
 		$http({
 			method : 'POST',
 			url : 'https://pizzaserver.herokuapp.com/pizzas',
 			dataType : 'json',
-			data : {name: $scope.name,
-					description: $scope.description}
+			data : {pizza: { name: $scope.name,
+					description: $scope.description}}
 		})
 		.success(function(data){
 			if (data.errors) {
 				$scope.errorName = data.errors.name;
 			}
 			$scope.newPizzaId = data.id;
-			$scope.newPizzaForm = 2; 
-
+			$scope.formPart = true;
 			//$location.path('/pizzas');
-
-		})
+		});
 	};
-});
+
+$scope.submitToppings = function() {
+	console.log('id: '+ $scope.toppings_id)
+	
+	$scope.newPizzaToppings = $scope.toppings_id.filter(function(n){ return n != undefined });
+	//$scope.newPizzaToppings = angular.toJson($scope.newPizzaToppings);
+	console.log('Topping: '+ $scope.newPizzaToppings);
+
+	$http({
+			method : 'POST',
+			url : 'https://pizzaserver.herokuapp.com/pizzas/76/toppings/',
+			dataType : 'json',
+			data : { topping_id: $scope.newPizzaToppings }
+		})
+		.success(function(data){
+			if (data.errors) {
+				$scope.errorName = data.errors.name;
+			}			
+			//$location.path('/pizzas');
+		});
+
+};
+
+
+
+
+}]);

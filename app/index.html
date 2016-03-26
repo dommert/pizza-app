@@ -14,6 +14,11 @@
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
 <!-- Bootstrap UI -->
   <script src="vendor/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+      <!-- Loading Bar -->
+ <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.css' type='text/css' media='all' />
+ <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.js'></script>
+
+
 <!-- /Vendors-->
 
 <!-- Application -->
@@ -32,27 +37,28 @@
     <div id="topNav" ng-include="'templates/partials/nav.html'"></div>
       
       <div id="topsec" class="row">
-        <div class="col-md-1">  </div>
+        <div class="col-sm-1 col-md-1">  </div>
         
-        <div id="topBox" class="col-md-10 col-center">
+        <div id="topBox" class="col-sm-11 col-md-10 col-center">
           <center>
             <div id="headerBox">
               <h1> Pizza...Pizza!!</h1>
             </div>
           </center>
         </div> 
+        <div class="col-md-1">  </div>
   </header>        
       
 
 
   <div id="middle" class="row">
-    <div class="col-md-1">  </div>
-    <div class="col-md-10">
-      <ui-view>  
+    <div class="col-sm-1 col-md-1">  </div>
+    <div class="col-sm-11 col-md-10">    
+      <ui-view class="row">  
       <!-- UI-Router View -->
       </ui-view>
     </div>
-    <div class="col-sm-1">  </div>
+    <div class="col-md-1">  </div>
   </div>
 
 <footer class="row">
@@ -60,9 +66,7 @@
 </footer>
 
 
-      <!-- Loading Bar -->
- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.css' type='text/css' media='all' />
- <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.js'></script>
+
 </body>
 </html>
 
