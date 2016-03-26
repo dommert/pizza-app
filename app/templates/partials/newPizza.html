@@ -1,7 +1,9 @@
 <div id="middleBox" class="col-sm-12">
 <div>
+<button ng-click="$window.alert('test');">Alert</button>
 <h3>New Pizza</h3>
- <form role="form">
+<section id="form1" ng-show="formPart=1">
+ <form role="form" ng-submit="newPizzaForm()">
   <div class="form-group">
     <label for="name">Pizza Name:</label>
     <input type="name" class="form-control" id="name">
@@ -12,6 +14,20 @@
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
+</section>
+<section id="form2" ng-show"formPart=2">
+<form role="form" ng-submit="newPizzaForm2()">
+  <div class="form-group">
+    <label for="name">Pizza Name:</label>
+    <input type="name" class="form-control" id="name">
+  </div>
+  <div class="form-group">
+    <label for="desc">Pizza Description:</label>
+    <input type="description" class="form-control" id="description">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</section>
 </div>
 
 </div>
