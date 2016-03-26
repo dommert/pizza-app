@@ -2,6 +2,7 @@ webApp.config(['$urlRouterProvider', '$stateProvider',
     function($urlRouterProvider, $stateProvider) {
       $urlRouterProvider.otherwise('/');
         $stateProvider
+          
           .state('home', {
             url: '/',
             templateUrl: 'templates/partials/frontpage.html',
@@ -15,9 +16,9 @@ webApp.config(['$urlRouterProvider', '$stateProvider',
           })
 
           .state('pizza', {
-            url: '/pizza/:id',
+            url: '/pizza/{pizzaId}',
             templateUrl: 'templates/partials/pizza.html',
-            controller: 'mainCtrl'
+            controller: 'pizzaCtrl'
           })
 
           .state('newPizza', {
