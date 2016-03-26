@@ -6,12 +6,15 @@
 		</div>
 		
 		<div class="col-sm-8">
-		<h1> {{ pizza.name }} name </h1>	
-			<p>	{{ pizza.description }} description </p>
+		<div ng-repeat="pizza in pizzas | filter: {id: pizzaId}">
+		<h1> {{pizza.name}}</h1>
+		<p><i>Description:</i> {{pizza.description}}</p>
+		</div>
+			
 			<ul ng-repeat="topping in toppings | orderBy:'name'">
-				<li class="button">Toppings</li>
 				<li class="button">{{topping.name}}</li>
 			</ul>
+			<button ng-click="orderPizza('Pizza Ordered!');">ORDER</button>
 		</div>
 	</div>
 </div>
