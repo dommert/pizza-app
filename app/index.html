@@ -22,32 +22,43 @@
   <script src="assets/js/routes.js"></script>        
 
   <title>Pizza App</title>
+<!-- Meta Data -->
 
 </head>
 
 <body>
- <div id="container" class="row" ng-controller="mainCtrl">
-  <div id="topNav" ng-include="'templates/partials/nav.html'"></div>
-  
-  <header class="row">
-    <div class="col-sm-1"></div>
-    <div id="frameBox" class="col-sm-10 col-center">
-      <center>
-        <div id="headerBox" class="col-sm-12">
-          <h1> Pizza...Pizza!!</h1>
-        </div>
-      </center>
-    <div class="col-sm-1"></div>
-  </header>
+<div id="container" class="row" ng-controller="mainCtrl">
+  <header> 
+    <div id="topNav" ng-include="'templates/partials/nav.html'"></div>
+      
+      <div id="topsec" class="row">
+        <div class="col-md-1">  </div>
+        
+        <div id="topBox" class="col-md-10 col-center">
+          <center>
+            <div id="headerBox">
+              <h1> Pizza...Pizza!!</h1>
+            </div>
+          </center>
+        </div> 
+  </header>        
+      
 
-  <!-- UI-Router View -->
-  <div id="middle" class="row" ui-view> </div>
 
-  <footer class="row">
-    <div id="footBox" class="col-sm-12"></div>
-   </footer>
-  </div>    
-</div>
+  <div id="middle" class="row">
+    <div class="col-md-1">  </div>
+    <div class="col-md-10">
+      <ui-view>  
+      <!-- UI-Router View -->
+      </ui-view>
+    </div>
+    <div class="col-sm-1">  </div>
+  </div>
+
+<footer class="row">
+  <div id="footBox" class="col-sm-12">  </div>
+</footer>
+
 
       <!-- Loading Bar -->
  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.css' type='text/css' media='all' />
