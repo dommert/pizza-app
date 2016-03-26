@@ -1,3 +1,6 @@
+// Dommert's Pizza App 2016
+// Controllers
+
 // ------ toppings Controller  ---------> 
 webApp.controller('toppingsCtrl', function($scope, $http) {
     $http.get("https://pizzaserver.herokuapp.com/toppings")
@@ -54,3 +57,28 @@ webApp.controller('pizzaCtrl', function($stateParams, $scope, $http){
 
 });
 
+// ------ newPizza Controller  ---------> 
+webApp.controller('newPizzaCtrl', function($scope, $http, $location){
+	$scope.formData = {};
+
+	$scope.newPizzaForm = function() {
+		$scope
+		$http({
+			method : 'POST',
+			url : 'https://pizzaserver.herokuapp.com/pizzas',
+			dataType : 'json',
+			data : {name: $scope.name,
+					description: $scope.description}
+		})
+		.success(function(data){
+			if (data.errors) {
+				$scope.errorName = data.errors.name;
+			}
+			$scope.newPizzaId = data.id;
+			$scope.newPizzaForm = 2; 
+
+			//$location.path('/pizzas');
+
+		})
+	};
+});
