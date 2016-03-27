@@ -64,8 +64,9 @@ webApp.controller('newPizzaCtrl', ['$scope', '$http', '$location',  function($sc
 	$scope.formData = {};
 	$scope.formPart = false;
 	$scope.toppings_id = [];
+	$scope.newToppings = {};
 	$scope.console = console; 
-
+	
 	$scope.newPizzaForm = function() {
 		$http({
 			method : 'POST',
@@ -89,24 +90,26 @@ $scope.submitToppings = function() {
 	
 	$scope.newPizzaToppings = $scope.toppings_id.filter(function(n){ return n != undefined });
 	//$scope.newPizzaToppings = angular.toJson($scope.newPizzaToppings);
-	console.log('Topping: '+ $scope.newPizzaToppings);
+	
 
-	$http({
+	for (i = 0; i < $scope.newPizzaToppings.length; i++) {
+    	if (i < 1 ) { $scope.toppingTest += " , "; };
+    	$scope.myTopping = $scope.newPizzaToppings[i];
+    	
+			$http({
 			method : 'POST',
-			url : 'https://pizzaserver.herokuapp.com/pizzas/76/toppings/',
+			url : 'https://pizzaserver.herokuapp.com/pizzas/'+ $scope.newPizzaId +'/toppings/',
 			dataType : 'json',
-			data : { topping_id: $scope.newPizzaToppings }
+			data : {topping_id: $scope.myTopping }
 		})
 		.success(function(data){
 			if (data.errors) {
 				$scope.errorName = data.errors.name;
 			}			
-			//$location.path('/pizzas');
+			$location.path('/pizzas');
 		});
-
-};
-
-
+		};
+	};
 
 
 }]);

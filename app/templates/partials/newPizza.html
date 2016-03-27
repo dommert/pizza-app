@@ -1,11 +1,5 @@
 <div id="middleBox" class="col-sm-12">
 	<div>
-	{{formPart}}
-	<button ng-click="$window.alert('test');">Alert</button>
-	<button ng-click="formPart = true">B</button>
-	{{newPizzaId}}
-	{{formData}}
-	{{toppings_id | json}}
 
 	<h3>New Pizza</h3>
 	
@@ -27,12 +21,12 @@
 		<div ng-controller="toppingsCtrl"/>
 		<div class="row" />
 		<form role="form2" ng-submit="submitToppings()">				
-	 			<div ng-repeat="topping in toppings | orderBy:'name'" ng-if="topping.name"> 
-					<input type="checkbox" ng-model="toppings_id[topping.id]"  ng-true-value="{{topping.id}}" ng-false-value="{{null}}"> <label>{{ topping.id }} {{ topping.name }}</label> </input>
+	 			<div ng-repeat="topping in toppings | orderBy:'name'| unique: 'name'" ng-if="topping.name"> 
+
+					<input type="checkbox" name="topping_id" ng-model="toppings_id[topping.id]"  ng-true-value="{{topping.id}}" ng-false-value="{{null}}"> <label>{{ topping.name }}</label> </input>
 
 	  			</div>
-  			
-	  		<button type="submit" class="btn btn-default">Submit</button>
+  				<button type="submit" class="btn btn-default">Submit</button>
 		</form>
 	</section>
 </div>
