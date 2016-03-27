@@ -2,7 +2,7 @@
 <!-- Dommert Inc 2016 -->
     <!-- BootstrapUI-App Template --> 
         <!-- http://github.com/dommert/bootstrapui-app -->
-<html ng-app="webApp">
+<html ng-app="webApp" konami-code>
 <head>
 <!-- Load Vendors -->
 <!-- Angular  1.2.5 -->
@@ -62,8 +62,8 @@
     <div class="col-xs-1">  </div>
   </div>
 
-<footer class="container row">
-  <div id="footBox" class="col-xs-12 col-xs-offset-1"> <BR><BR><BR><font size='-2'>&copy; Dommert 2016 Pizza App </font></div>
+<footer class="container row" ng-include="'templates/partials/footer.html'">
+
 </footer>
 
 
