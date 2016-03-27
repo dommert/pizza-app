@@ -4,7 +4,7 @@
 // App
 
 
-var webApp = angular.module('webApp', ['ui.bootstrap', 'ui.router','angular-loading-bar', 'ngAnimate']);
+var webApp = angular.module('webApp', ['ui.bootstrap', 'ui.router','angular-loading-bar', 'ngAnimate', 'angular.filter']);
 
 webApp.controller('mainCtrl',
 	function($scope){
