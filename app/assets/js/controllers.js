@@ -32,7 +32,7 @@ webApp.controller('newToppingCtrl', function($scope, $http, $location){
 
 // ------ Pizzas Controller  ---------> 
 webApp.controller('pizzasCtrl', function($scope, $http){
-    $http.get("https://pizzaserver.herokuapp.com/pizzas", { cache: true})
+    $http.get("https://pizzaserver.herokuapp.com/pizzas")
     .then(function(response){
         $scope.pizzas = response.data;
     });
