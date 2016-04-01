@@ -1,0 +1,20 @@
+<div id="middleBox" class="col-xs-12">
+	<div class="row">
+		<div class="col-xs-12 col-sm-4">
+			
+			<img src="assets/images/pepporoni_pizza.png"></img>
+		</div>
+		
+		<div class="col-xs-12 col-sm-8">
+		<div ng-repeat="pizza in pizzas | filter: {id: pizzaId}">
+		<h1> {{pizza.name}}</h1>
+		<p><i>Description:</i> {{pizza.description}}</p>
+		</div>
+			
+			<ul ng-repeat="topping in toppings | orderBy:'name'">
+				<li class="button">{{topping.name}}</li>
+			</ul>
+			<button ng-click="orderPizza('Pizza Ordered!');">ORDER</button>
+		</div>
+	</div>
+</div>

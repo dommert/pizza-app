@@ -1,0 +1,41 @@
+<div class="container col-xs-12">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+  <div class="navbar-brand">PIZZA APP </div>
+ 
+	</div>
+  <div >
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="about">About</a></li>
+        <li><a ui-sref="pizzas">Pizzas</a></li>
+        <li><a ui-sref="toppings">Toppings</a></li>
+        <li></li>
+    </ul> 
+  </div>
+ <button type="button" class="btn btn-success btn-lg align-right" ui-sref="newPizza">New Pizza</button>
+</nav>
+
+
+<div class="row container" ng-click="isKonamiEnable = false">
+        <section ng-controller="MyCtrl" class="col-xs-12 col-xs-offset-2">
+
+
+  
+          <div ng-if="isKonamiEnable">
+          <h1>Hire Me!</h1>
+          <h4> Dommert@Gmail.com </h4>
+          <p> I'm awesome, do I need to say more? :P </p>
+          <P> Well here is a Unicorn then... </P>
+            <a href="http://github.com/dommert" title="Dont click me!">
+              <img src="http://fc06.deviantart.net/fs71/f/2012/173/d/d/unicorn_run_jump_cycle___adiian_by_dikkebobby-d54fnuu.gif" />
+            </a>
+          </div>
+          
+        </section>
+    </div>
+    </div>
+
+
+</div>
+

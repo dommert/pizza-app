@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      "angular-resource",
+      "/home/dommert/bootstrap"
+    ]
+  ],
+  "_from": "angular-resource@latest",
+  "_id": "angular-resource@1.5.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/angular-resource",
+  "_nodeVersion": "4.4.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/angular-resource-1.5.2.tgz_1458342001658_0.39171479595825076"
+  },
+  "_npmUser": {
+    "email": "angular-core+npm@google.com",
+    "name": "angularcore"
+  },
+  "_npmVersion": "2.14.20",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "angular-resource",
+    "raw": "angular-resource",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-resource/-/angular-resource-1.5.2.tgz",
+  "_shasum": "99be3453f48110e7671d41b66ba64d651dfb50e1",
+  "_shrinkwrap": null,
+  "_spec": "angular-resource",
+  "_where": "/home/dommert/bootstrap",
+  "author": {
+    "email": "angular-core+npm@google.com",
+    "name": "Angular Core Team"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular.js/issues"
+  },
+  "dependencies": {},
+  "description": "AngularJS module for interacting with RESTful server-side data sources",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "99be3453f48110e7671d41b66ba64d651dfb50e1",
+    "tarball": "http://registry.npmjs.org/angular-resource/-/angular-resource-1.5.2.tgz"
+  },
+  "gitHead": "71d95e1edb207113f42d2a599e5e734951459252",
+  "homepage": "http://angularjs.org",
+  "keywords": [
+    "angular",
+    "framework",
+    "browser",
+    "rest",
+    "client-side"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "roy@roylines.co.uk",
+      "name": "roylines"
+    },
+    {
+      "email": "angular-core+npm@google.com",
+      "name": "angularcore"
+    },
+    {
+      "email": "pete@bacondarwin.com",
+      "name": "petebd"
+    }
+  ],
+  "name": "angular-resource",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular.js.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.5.2"
+}

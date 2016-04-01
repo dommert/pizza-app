@@ -1,0 +1,20 @@
+<div id="middleBox" class="col-xs-12">
+	<div>
+	<h2>Pizzas</h2>
+
+<style type="text/css">
+.trow:nth-child(odd){
+   background-color:lightgreen;}
+</style>
+
+
+	<table class="table table-stripe">
+		<thead><th>Pizza Name</th><th>Description</th></thead>
+		<tr class="trow" ng-repeat="pizza in pizzas | orderBy:'name'| unique: 'name'" ng-if="pizza.name"><th> {{ pizza.name }} </th> <th> {{pizza.description}} </th><th><button class="btn btn-danger" ui-sref="pizza({pizzaId: pizza.id, 
+			pizzaName: pizza.name, 
+			pizzaDesc: pizza.description})">Info</button></th></tr>
+		<tr>
+		<th>{{toppings}}</th> </tr>
+	</table>
+	</div>
+</div>

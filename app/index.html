@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- Dommert Inc 2016 -->
+    <!-- BootstrapUI-App Template --> 
+        <!-- http://github.com/dommert/bootstrapui-app -->
+<html ng-app="webApp" konami-code>
+<head>
+<!-- Load Vendors -->
+<!-- Angular  1.2.5 -->
+  <script src="vendor/angular/angular.js"></script>
+  <script src="vendor/angular-animate/angular-animate.js"></script>
+  <script src="vendor/angular-touch/angular-touch.js"></script>
+  <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+<!-- Bootstrap UI -->
+  <script src="vendor/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+      <!-- Loading Bar -->
+ <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.css' type='text/css' media='all' />
+ <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.js'></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
+<!-- /Vendors-->
+
+<!-- Application -->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/controllers.js"></script>     
+  <script src="assets/js/routes.js"></script>        
+
+  <title>Pizza App</title>
+<!-- Meta Data -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+<div id="container" class="row" ng-controller="mainCtrl">
+
+    <div id="topNav" ng-include="'templates/partials/nav.html'"></div>
+    <header class="container row">  
+      <div id="topsec">
+        <div class="col-sm-1">  </div>
+        
+        <div id="topBox" class="col-xs-12 col-sm-10 col-center">
+          <center>
+            <div id="headerBox">
+              <h1> Pizza...Pizza!!</h1>
+            </div>
+          </center>
+        </div> 
+        <div class="col-md-1">  </div>
+  </header>        
+      
+
+
+  <div id="middle" class="container row">
+    <div class="col-xs-1 col-sm-1">  </div>
+    <div class="col-xs-11 col-sm-10">    
+      <ui-view class="row">  
+      <!-- UI-Router View -->
+      </ui-view>
+    </div>
+    <div class="col-xs-1">  </div>
+  </div>
+
+<footer class="container row" ng-include="'templates/partials/footer.html'">
+
+</footer>
+
+
+
+</body>
+</html>
+

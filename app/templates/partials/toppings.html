@@ -1,0 +1,15 @@
+<div id="middleBox" class="col-xs-12">
+<style type="text/css">
+.trow:nth-child(odd){
+   background-color:lightblue;
+}
+</style>
+<div>
+	<h2>Toppings</h2>
+	<button class="btn" ui-sref="newTopping">Create/Add Topping</button>
+	<BR><BR>
+	<table class="table table-stripe">
+		<tr class="trow" ng-repeat="topping in toppings | orderBy:'name' | unique: 'name'" ng-if="topping.name"><th>{{ topping.name }} </th> </tr>
+	</table>
+</div>
+</div>
